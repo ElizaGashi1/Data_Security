@@ -1,32 +1,78 @@
-# Data_Security
-Modular implementation of classical cryptographic algorithms (Rail Fence, Morse Code, Homophonic Cipher) with a unified encryption/decryption interface.
+DATA SECURITY – KRIPTIMI I TË DHËNAVE
 
-This project presents a modular implementation of three classical cryptographic algorithms:
+Ky projekt implementon tre algoritme të ndryshme të kriptografisë:
 
-Rail Fence Cipher,
-Morse Code Encoding,
+Morse Code Cipher
 Homophonic Substitution Cipher
+Rail Fence Cipher
 
-The primary objective is to design and implement these algorithms in a structured and consistent manner, enabling both independent functionality and seamless integration within a unified system. The project emphasizes clean architecture, reusability, and correctness, while also providing a theoretical foundation for each algorithm.
+Qëllimi i projektit është të demonstrojë mënyra të ndryshme të enkriptimit dhe dekriptimit të tekstit.
 
-Objectives: 
-Implement classical cryptographic algorithms in Python, 
-Ensure a consistent encryption/decryption interface, 
-Support both encryption and decryption operations, 
-Handle edge cases and validate correctness through testing, 
-Design a modular and scalable system for integration
+Përdorimi i programit
 
-Implemented Algorithms
-1. Rail Fence Cipher
+Pas ekzekutimit shfaqet menuja:
 
-A transposition cipher that rearranges characters in a zig-zag pattern across multiple rows.
+1. Morse Code
+2. Homophonic Cipher
+3. Rail Fence Cipher
+4. Exit
+Zgjedh algoritmin me numër (1–3)
+Pastaj fut tekstin për enkriptim/dekriptim
 
-2. Morse Code
 
-A method of encoding text into sequences of dots and dashes, commonly used in telecommunication.
+PËRSHKRIMI I ALGORITMEVE
 
-3. Homophonic Substitution Cipher
+🔷 1. Morse Code Cipher
 
-A substitution cipher where each plaintext character can map to multiple possible ciphertext symbols, increasing resistance to frequency analysis.
+Morse Code është një metodë e thjeshtë kriptimi ku çdo shkronjë zëvendësohet me kombinim pikash dhe vijash.
 
-Each algorithm includes both encryption and decryption functionality, along with appropriate handling of input constraints.
+Përdoret për komunikim të hershëm (radio, sinjale)
+Është algoritëm zëvendësimi (substitution cipher)
+
+ Karakteristikë:
+
+Një shkronjë → një kod Morse
+Lehtë për t’u kuptuar, por jo i sigurt
+
+🔷 2. Homophonic Substitution Cipher
+
+Ky algoritëm është version më i avancuar i zëvendësimit.
+
+Çdo shkronjë mund të zëvendësohet me shumë simbole të ndryshme
+E bën më të vështirë analizën frekuenciale
+
+Karakteristikë:
+
+Më i sigurt se Morse
+Përdor “key” për dekriptim në disa raste
+Shpesh jep output të ndryshëm për të njëjtin tekst
+
+🔷 3. Rail Fence Cipher
+
+Ky është algoritëm transpozicioni.
+
+Teksti shkruhet në formë zig-zag mbi disa “shina” (rails)
+Pastaj lexohet rresht për rresht për të krijuar tekstin e enkriptuar
+
+Karakteristikë:
+
+Nuk ndryshon shkronjat, vetëm renditjen
+Siguria varet nga numri i rails
+
+
+SHEMBUJ EKZEKUTIMI:
+1.Morse code
+Input: Hello
+Output: .... . .-.. .-.. ---
+
+2.Homophonic Cipher
+Input: Hello
+Output: G7 X3 L9 L2 O5
+
+3.Rail Fence Cipher
+Input: Hello World
+Output: HOLELWRDLO
+
+Përfundim
+
+Ky projekt demonstron tre teknika të ndryshme të kodimit dhe kriptimit të tekstit, duke ilustruar dallimin midis zëvendësimit dhe transpozimit, si dhe kodimit simbolik.
