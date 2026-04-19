@@ -54,3 +54,10 @@ def decode(morse_text: str) -> str:
         decoded_characters.append(reverse_morse_code[symbol])
 
     return ''.join(decoded_characters)
+
+def encrypt(text: str) -> str:
+    return encode(text)
+
+def decrypt(morse_text: str) -> str:
+    return decode(morse_text)
+
