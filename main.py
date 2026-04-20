@@ -2,6 +2,7 @@
 
 # Morse (mbështet encrypt/decrypt OSE encode/decode)
 from algorithms.MorseCode import morse as morse_module
+# Rail Fence:
 import algorithms.rail_fence as rail_fence_module
 # Homophonic
 import algorithms.Homophonic_sub_cipher as homophonic_module
@@ -33,9 +34,9 @@ def morse_flow():
     encrypt = get_encrypt(morse_module)
     decrypt = get_decrypt(morse_module)
 
-    text = input("Enter text: ")
+    text = input("\nEnter text: ")
 
-    cipher = encrypt(text)
+    cipher = encrypt(text)s
     print("Encrypted:", cipher)
 
     print("Decrypted:", decrypt(cipher))
@@ -45,7 +46,7 @@ def homophonic_flow():
     encrypt = get_encrypt(homophonic_module)
     decrypt = get_decrypt(homophonic_module)
 
-    text = input("Enter text: ")
+    text = input("\nEnter text: ")
 
     try:
         cipher = encrypt(text)
@@ -65,7 +66,7 @@ def rail_fence_flow():
     encrypt = get_encrypt(rail_fence_module)
     decrypt = get_decrypt(rail_fence_module)
 
-    text = input("Enter text: ")
+    text = input("\nEnter text: ")
 
     try:
         cipher = encrypt(text)
@@ -76,8 +77,8 @@ def rail_fence_flow():
         cipher = encrypt(text, key)
         print("Encrypted:", cipher)
         print("Decrypted:", decrypt(cipher, key))
-# ================= MAIN =================
 
+# ================= MAIN =================
 def main():
     while True:
         print("\n--- DATA SECURITY TEST ---")
@@ -87,7 +88,7 @@ def main():
         print("4. Exit")
 
         choice = input("Choose algorithm: ")
-
+        
         if choice == "1":
             morse_flow()
 
