@@ -36,7 +36,7 @@ def morse_flow():
 
     text = input("\nEnter text: ")
 
-    cipher = encrypt(text)s
+    cipher = encrypt(text)
     print("Encrypted:", cipher)
 
     print("Decrypted:", decrypt(cipher))
